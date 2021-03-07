@@ -1,7 +1,8 @@
 # front-defender
 
-#####保卫前端数据类型安全，接口返回的数据类型，从一开始就确定，并且在运行时加入检查！
-轻量的切面使用方式，promise或rxjs都能在编写请求时预先定义类型，rxjs使用例子：
+#### 保卫前端数据类型安全，接口返回的数据类型，从一开始就确定，并且在运行时加入检查！
+
+类似切面使用方式，promise或rxjs都能在编写请求时预先定义类型，rxjs使用例子：
 ```
 getJson() {
     return this.http.get('assets/hello.json')
