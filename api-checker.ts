@@ -1,4 +1,4 @@
-class FrontDefender {
+class ApiChecker {
     static loadConfig(config) {
         return (apiData) => {
             try {
@@ -19,14 +19,14 @@ class FrontDefender {
                         rulesArr = rulesArr.filter(rule => rule !== 'optional');
                         if (typeof rules === 'string') {
                             rulesArr.forEach(rule => {
-                                FrontDefender[rule](levelKeys, data[key]);
+                                ApiChecker[rule](levelKeys, data[key]);
                             });
                         } else {
                             // If optional not set, and rule set as object means neccessary.
-                            if (!FrontDefender.notnull(levelKeys, data[key])) return;
+                            if (!ApiChecker.notnull(levelKeys, data[key])) return;
                             if (rulesArr.includes('json')) {
                                 let toCheckObject;
-                                [data[key], toCheckObject] = FrontDefender.json(levelKeys, data[key], rulesArr);
+                                [data[key], toCheckObject] = ApiChecker.json(levelKeys, data[key], rulesArr);
                                 if (!toCheckObject) return;
                             }
                             if (Object.prototype.toString.call(data[key]) !== '[object Object]') {
