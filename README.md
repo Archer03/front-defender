@@ -1,7 +1,7 @@
 # front-defender
 
-#### 保卫前端数据类型安全，接口返回的数据类型，从一开始就确定，并且在运行时加入检查。有bug请找后端✔
-##### To defend frontend data security, response data types from api need to be check, and we can check at runtime. Call backend bug occurs😜
+#### 保卫前端数据类型安全，接口返回的数据类型，从一开始就确定，并且在运行时加入检查。有bug可以找后端✔
+##### To defend frontend data security, response data types from api need to be checked, and we can check at runtime. Call backend bug occurs😜
 
 类似切面使用方式，promise或rxjs都能在编写请求方法的同时定义返回数据类型，使用例子：
 ```javascript
