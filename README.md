@@ -7,7 +7,7 @@
 ```javascript
 getJson() {
     return this.http.get('assets/hello.json')
-      .pipe(tap(FrontDefender.loadConfig({
+      .pipe(tap(ApiChecker.loadConfig({
         hello: 'notnull',
         child: {
           $rule: 'optional',
